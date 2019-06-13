@@ -13,11 +13,9 @@ class Feed extends Component {
     };
 
     async componentDidMount() {     
-        console.log(this.state.feed)   
         const response = await api.get('posts');        
-        
-        this.setState({ feed: response.data });
-        
+
+        this.setState({ feed: response.data });        
     }
 
     render() {
